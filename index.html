@@ -1,0 +1,441 @@
+<!--
+  Built by LevelUpAI (levelupaico.com) for Swift Physical therapy.
+  Build ID: LVLUP-312d3661b64b
+  Built: 2026-09-28T13:24:30.147Z
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="generator" content="LevelUpAI Site Builder">
+<meta name="levelupai-build-id" content="LVLUP-312d3661b64b">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swift Physical therapy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0d0d;
+  --ink-deep:#151515;
+  --accent:#1a4fe0;
+  --accent-hover:#0f3db5;
+  --accent-pale:#eaedff;
+  --accent-tint:#5b8cff;
+  --base:#ffffff;
+  --neutral:#f8f7f4;
+  --border:#e3e1da;
+  --muted:#5c5a55;
+  --muted-light:#9a9890;
+  --star:#f4b942;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--base);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+.container{max-width:1100px;margin:0 auto;padding:0 2rem}
+a{color:inherit}
+img{display:block;max-width:100%}
+
+nav{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:1.1rem 2rem;display:flex;justify-content:space-between;align-items:center;z-index:100}
+
+/* ---------- LEVELUPAI BRANDING BAR ---------- */
+.lvlup-brand-bar{display:none;}
+body[data-lvlup-branding="true"] .lvlup-brand-bar{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--ink);color:var(--base);padding:12px 2rem;font-family:'DM Sans',sans-serif;
+  flex-wrap:wrap;gap:10px;
+}
+.lvlup-brand-left{display:flex;align-items:center;gap:10px;font-size:0.85rem;}
+.lvlup-brand-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.lvlup-brand-sub{color:rgba(255,255,255,0.5);margin-left:6px;font-weight:400;}
+.lvlup-brand-cta{
+  background:var(--accent);color:var(--base);padding:9px 20px;border-radius:8px;
+  font-weight:600;font-size:0.8rem;text-decoration:none;white-space:nowrap;
+  transition:background .2s ease;
+}
+.lvlup-brand-cta:hover{background:var(--accent-hover);}
+@media (max-width:600px){
+  .lvlup-brand-bar{padding:10px 1.2rem;}
+  .lvlup-brand-sub{display:none;}
+}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;font-weight:700;color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a:not(.nav-cta){font-size:0.92rem;font-weight:500;color:var(--muted);padding-bottom:3px;border-bottom:1.5px solid transparent;transition:border-color .2s ease,color .2s ease}
+.nav-links a:not(.nav-cta):hover{color:var(--ink);border-color:var(--accent)}
+.nav-links a.current{color:var(--ink);border-color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-toggle{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--ink)}
+
+/* Page header (About / Services) */
+.page-header{padding:80px 2rem 20px;max-width:720px;margin:0 auto;text-align:center}
+.page-header h1{font-family:'DM Serif Display',serif;font-size:clamp(2.1rem,4vw,2.8rem);line-height:1.15;margin-bottom:1rem;color:var(--ink)}
+.page-header p{color:var(--muted);font-size:1.02rem;line-height:1.7}
+
+.hero{padding:90px 2rem 70px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.hero>div{min-width:0}
+.hero-eyebrow{display:inline-block;background:var(--accent-pale);color:var(--accent);font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.3rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.1rem,4vw,3rem);line-height:1.15;margin-bottom:1.2rem;color:var(--ink)}
+.hero p{color:var(--muted);font-size:1.05rem;margin-bottom:1.8rem;max-width:480px}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:var(--base);padding:0.85rem 1.8rem;border-radius:8px;font-weight:500;text-decoration:none;display:inline-block;border:none;cursor:pointer;transition:transform 0.2s ease,box-shadow 0.2s ease}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,79,224,0.3)}
+.btn-secondary{background:transparent;color:var(--ink);padding:0.85rem 1.8rem;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--border);display:inline-block;transition:border-color 0.2s ease,transform 0.2s ease}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-photo{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(13,13,13,0.15);aspect-ratio:4/3;transition:box-shadow 0.3s ease}
+.hero-photo:hover{box-shadow:0 28px 64px rgba(13,13,13,0.22)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.hero-photo:hover img{transform:scale(1.05)}
+
+/* Stats — subtle lift + number pop on hover */
+.stats-bar{background:var(--ink);padding:2.8rem 2rem}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stats-inner>*{min-width:0;transition:transform 0.25s ease}
+.stats-inner>*:hover{transform:translateY(-4px)}
+.stat-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--base);transition:color 0.25s ease}
+.stats-inner>*:hover .stat-num{color:var(--accent-tint)}
+.stat-label{color:var(--muted-light);font-size:0.85rem;margin-top:0.3rem}
+
+.section{padding:70px 2rem}
+.section-eyebrow{font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
+.section-title{font-family:'DM Serif Display',serif;font-size:2rem;margin-bottom:1rem}
+.section-sub{color:var(--muted);max-width:600px;margin-bottom:2.5rem}
+
+/* Gallery — bigger, 6 photos */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.gallery>*{min-width:0;border-radius:14px;overflow:hidden}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;transition:transform 0.4s ease}
+.gallery img:hover{transform:scale(1.08)}
+
+.nav-cta{background:var(--accent);color:var(--base);padding:0.6rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:background 0.2s ease,transform 0.2s ease}
+.nav-cta:hover{background:var(--accent-hover);transform:translateY(-2px)}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.services>*{min-width:0}
+.service-card{background:var(--neutral);border-radius:16px;padding:1.8rem;transition:transform 0.25s ease,box-shadow 0.25s ease,background 0.25s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(13,13,13,0.1);background:var(--base)}
+.service-card h3{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:0.6rem}
+.service-card p{color:var(--muted);font-size:0.92rem}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testimonials>*{min-width:0}
+.testimonial-card{background:var(--base);border:1.5px solid var(--border);border-radius:16px;padding:1.8rem;transition:transform 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease}
+.testimonial-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 32px rgba(26,79,224,0.12)}
+.stars{color:var(--star);font-size:1rem;margin-bottom:0.8rem}
+.testimonial-card p{color:#3a3833;font-size:0.95rem;font-style:italic;margin-bottom:1.2rem}
+.testimonial-name{font-weight:600;font-size:0.9rem}
+.testimonial-role{color:var(--muted-light);font-size:0.82rem}
+
+/* FAQ — expands on hover with subtle accent */
+.faq-item{border-bottom:1px solid var(--border);padding:1.4rem 0;transition:padding-left 0.25s ease,border-color 0.25s ease}
+.faq-item:hover{padding-left:0.8rem;border-color:var(--accent)}
+.faq-item h3{font-size:1.05rem;font-weight:600;margin-bottom:0.5rem}
+.faq-item p{color:var(--muted);font-size:0.93rem}
+
+.contact-band{background:var(--ink);color:var(--base);padding:60px 2rem;text-align:center}
+.contact-band h2{font-family:'DM Serif Display',serif;font-size:1.8rem;margin-bottom:0.8rem}
+.contact-band p{color:#c3c6d4;margin-bottom:1.8rem}
+.contact-info{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;color:var(--base);font-size:0.95rem}
+
+footer{background:var(--ink-deep);color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.85rem}
+.footer-links{display:flex;justify-content:center;gap:22px;margin-bottom:14px;flex-wrap:wrap}
+.footer-links a{font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.75)}
+.footer-links a:hover{color:var(--accent-tint)}
+
+/* ---------- STYLE SWITCHER WIDGET ---------- */
+.style-switcher{position:fixed;bottom:24px;right:24px;z-index:200;font-family:'DM Sans',sans-serif}
+.style-switcher .toggle-btn{width:52px;height:52px;border-radius:50%;background:var(--accent);border:3px solid var(--base);box-shadow:0 6px 18px rgba(0,0,0,0.3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:transform .2s ease}
+.style-switcher .toggle-btn:hover{transform:scale(1.08)}
+.style-switcher .panel{position:absolute;bottom:64px;right:0;background:var(--base);border:1.5px solid var(--ink);border-radius:10px;padding:14px;width:190px;box-shadow:0 10px 30px rgba(0,0,0,0.25);display:none;flex-direction:column;gap:8px}
+.style-switcher .panel.open{display:flex}
+.style-switcher .panel-label{font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:2px}
+.style-switcher .swatch-btn{display:flex;align-items:center;gap:10px;background:transparent;border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;cursor:pointer;text-align:left;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;color:var(--ink);transition:border-color .2s ease,background .2s ease}
+.style-switcher .swatch-btn:hover{border-color:var(--accent);background:var(--neutral)}
+.style-switcher .swatch-btn.active{border-color:var(--accent);border-width:2px;font-weight:700}
+.style-switcher .dots{display:flex;flex-shrink:0}
+.style-switcher .dots span{width:14px;height:14px;border-radius:50%;margin-left:-4px;border:1.5px solid #fff}
+.style-switcher .dots span:first-child{margin-left:0}
+@media (max-width:640px){
+  .style-switcher{bottom:16px;right:16px}
+  .style-switcher .toggle-btn{width:46px;height:46px;font-size:1.1rem}
+}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .services{grid-template-columns:1fr}
+  .testimonials{grid-template-columns:1fr}
+  .nav-links{
+    position:absolute;top:100%;left:0;right:0;background:var(--base);
+    border-bottom:1px solid var(--border);
+    flex-direction:column;align-items:flex-start;gap:0;
+    max-height:0;overflow:hidden;transition:max-height .3s ease;
+    padding:0 2rem;
+  }
+  .nav-links.open{max-height:300px;padding:10px 2rem 20px}
+  .nav-links a{width:100%;padding:12px 0;border-bottom:1px solid var(--border)}
+  .nav-toggle{display:block}
+}
+</style>
+</head>
+<body data-lvlup-branding="true">
+<span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;padding:0;margin:-1px;" aria-hidden="true">Website built by LevelUpAI for Swift Physical therapy — Build LVLUP-312d3661b64b — levelupaico.com</span>
+
+
+<div class="lvlup-brand-bar">
+  <div class="lvlup-brand-left">
+    <span class="lvlup-brand-dot"></span>
+    <span>Swift Physical therapy<span class="lvlup-brand-sub">Website design by LevelUpAI</span></span>
+  </div>
+  <a href="https://levelupaico.com/#contact" target="_blank" rel="noopener" class="lvlup-brand-cta">Get This Site</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Swift Physical therapy</a>
+  <div class="nav-links">
+    <a href="index.html" class="current">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a href="tel:(405) 633-6573" class="nav-cta">Call (405) 633-6573</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <span class="hero-eyebrow">physical therapists</span>
+    <h1>Swift Physical therapy — physical therapists You Can Trust</h1>
+    <p>Serving Edmond with reliable, professional physical therapists. Call today for a free quote.</p>
+    <div class="hero-buttons">
+      <a href="tel:(405) 633-6573" class="btn-primary">Call Now — (405) 633-6573</a>
+      <a href="about.html#contact" class="btn-secondary">Get a Free Quote</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1576089172869-4f5f6f315620?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8MXx8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy">
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="stat-num">15+</div><div class="stat-label">Years Experience</div></div>
+    <div><div class="stat-num">500+</div><div class="stat-label">Projects Completed</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Satisfaction Guaranteed</div></div>
+    <div><div class="stat-num">24/7</div><div class="stat-label">Customer Support</div></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-eyebrow">Gallery</div>
+  <h2 class="section-title">Our Work</h2>
+  <p class="section-sub">A look at recent projects from Swift Physical therapy.</p>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1576089172869-4f5f6f315620?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8MXx8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy work">
+    <img src="https://images.unsplash.com/photo-1632053003385-245d2569568a?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8Mnx8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy work">
+    <img src="https://images.unsplash.com/photo-1632052999447-e542d08d4f7d?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8M3x8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy work">
+    <img src="https://images.unsplash.com/photo-1623982566574-d8503e99791b?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8NHx8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy work">
+    <img src="https://images.unsplash.com/photo-1595589943370-3d84c8f54c98?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8NXx8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy work">
+    <img src="https://images.unsplash.com/photo-1723649373371-b8c05c5ae218?ixid=M3wxMDM1NzM1fDB8MXxzZWFyY2h8Nnx8cGh5c2ljYWwlMjB0aGVyYXBpc3RzJTIwd29ya2VyJTIwcHJvZmVzc2lvbmFsJTIwc2VydmljZXxlbnwwfDJ8fHwxNzkwNTQzODYxfDA&ixlib=rb-4.1.0&w=1200&q=80&fit=crop" alt="Swift Physical therapy work">
+  </div>
+  <p style="font-size:0.75rem;color:var(--muted-light);margin-top:0.8rem">Photos by <a href="https://unsplash.com/@nci?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">National Cancer Institute</a>, <a href="https://unsplash.com/@cdc?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">CDC</a>, <a href="https://unsplash.com/@cdc?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">CDC</a>, <a href="https://unsplash.com/@reneethompsonco?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">Reneé Thompson</a>, <a href="https://unsplash.com/@kseniialopyreva?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">Kseniia Lopyreva</a>, <a href="https://unsplash.com/@huylocnam?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">Huy Lộc</a> on <a href="https://unsplash.com/?utm_source=levelupai_site_builder&utm_medium=referral" target="_blank">Unsplash</a></p>
+</section>
+
+<section class="section">
+  <div class="section-eyebrow">Why choose us</div>
+  <h2 class="section-title">What We Offer</h2>
+  <p class="section-sub">Serving Edmond and the surrounding area.</p>
+  <div class="services">
+    <div class="service-card">
+      <h3>Reliable Service</h3>
+      <p>Swift Physical therapy shows up on time and does the job right, every time.</p>
+    </div>
+    <div class="service-card">
+      <h3>Local & Trusted</h3>
+      <p>Proudly serving Edmond with honest pricing and quality work.</p>
+    </div>
+    <div class="service-card">
+      <h3>Free Estimates</h3>
+      <p>Call today for a free, no-obligation quote on your next project.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-eyebrow">Testimonials</div>
+  <h2 class="section-title">What Our Customers Say</h2>
+  <p class="section-sub">Real feedback from real Edmond customers.</p>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"We are extremely satisfied with the work done by Swift Physical therapy. Professional, efficient, and the results exceeded our expectations."</p>
+      <div class="testimonial-name">Sarah M.</div>
+      <div class="testimonial-role">Homeowner, Edmond</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Swift Physical therapy provided exceptional physical therapists services for our property. Their attention to detail truly sets them apart."</p>
+      <div class="testimonial-name">James R.</div>
+      <div class="testimonial-role">Business Owner</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Professionalism, reliability, and quality define Swift Physical therapy's work. Highly recommend to anyone in Edmond."</p>
+      <div class="testimonial-name">Angela T.</div>
+      <div class="testimonial-role">Property Manager</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--neutral)">
+  <div class="section-eyebrow">FAQ</div>
+  <h2 class="section-title">Common Questions</h2>
+  <div class="faq-item">
+    <h3>Do you offer free estimates?</h3>
+    <p>Yes — call (405) 633-6573 for a free, no-obligation quote on your project.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What areas do you serve?</h3>
+    <p>Swift Physical therapy proudly serves Edmond and the surrounding area.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How quickly can you start?</h3>
+    <p>We work with your schedule — call us today to discuss timing for your project.</p>
+  </div>
+</section>
+
+<section class="contact-band" id="contact">
+  <h2>Ready to get started?</h2>
+  <p>Contact Swift Physical therapy today.</p>
+  <div class="contact-info">
+    <span>&#128222; (405) 633-6573</span>
+    <span>&#128205; 919 S Bryant Ave, Edmond, OK 73034, USA</span>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  © 2026 Swift Physical therapy. All rights reserved. Website by LevelUpAI.
+</footer>
+
+<div class="style-switcher">
+  <div class="panel" id="stylePanel">
+    <div class="panel-label">Color Style</div>
+    <button class="swatch-btn" data-style="blue">
+      <span class="dots"><span style="background:#0d0d0d"></span><span style="background:#1a4fe0"></span><span style="background:#f8f7f4"></span></span>
+      Modern Blue
+    </button>
+    <button class="swatch-btn" data-style="indigo">
+      <span class="dots"><span style="background:#0d0d0d"></span><span style="background:#4F46E5"></span><span style="background:#f8f7f4"></span></span>
+      Modern Indigo
+    </button>
+    <button class="swatch-btn" data-style="emerald">
+      <span class="dots"><span style="background:#0d0d0d"></span><span style="background:#059669"></span><span style="background:#f8f7f4"></span></span>
+      Modern Emerald
+    </button>
+  </div>
+  <button class="toggle-btn" id="styleToggle" aria-label="Change color style">&#127912;</button>
+</div>
+
+<script>
+(function(){
+  var palettes = {
+    blue:    { accent:'#1a4fe0', accentHover:'#0f3db5', accentPale:'#eaedff', accentTint:'#5b8cff' },
+    indigo:  { accent:'#4F46E5', accentHover:'#3730A3', accentPale:'#EEF0FF', accentTint:'#A5B4FC' },
+    emerald: { accent:'#059669', accentHover:'#047857', accentPale:'#ECFDF5', accentTint:'#6EE7B7' }
+  };
+  var root = document.documentElement;
+  var STORAGE_KEY = 'levelupai-site-style-modernblue';
+
+  function applyStyle(name){
+    var p = palettes[name];
+    if(!p) return;
+    root.style.setProperty('--accent', p.accent);
+    root.style.setProperty('--accent-hover', p.accentHover);
+    root.style.setProperty('--accent-pale', p.accentPale);
+    root.style.setProperty('--accent-tint', p.accentTint);
+    document.querySelectorAll('.style-switcher .swatch-btn').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-style') === name);
+    });
+    try{ localStorage.setItem(STORAGE_KEY, name); }catch(e){}
+  }
+
+  document.getElementById('styleToggle').addEventListener('click', function(){
+    document.getElementById('stylePanel').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.style-switcher .swatch-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyStyle(btn.getAttribute('data-style'));
+    });
+  });
+
+  var saved = null;
+  try{ saved = localStorage.getItem(STORAGE_KEY); }catch(e){}
+  applyStyle(saved || 'blue');
+})();
+</script>
+
+<style>
+  .device-toggle{position:fixed;top:16px;right:16px;z-index:150;display:flex;gap:4px;background:#fff;border-radius:100px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,0.15);}
+  .device-toggle button{width:36px;height:36px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#666;transition:background .2s ease,color .2s ease;}
+  .device-toggle button.active{background:#111;color:#fff;}
+  .device-toggle svg{width:18px;height:18px;}
+  @media (max-width:600px){ .device-toggle{display:none;} }
+
+  .phone-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;display:none;align-items:center;justify-content:center;padding:30px;}
+  .phone-overlay.open{display:flex;}
+  .phone-frame{width:375px;height:812px;max-height:90vh;background:#111;border-radius:40px;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,0.5);position:relative;}
+  .phone-frame::before{content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#111;border-radius:0 0 16px 16px;z-index:2;}
+  .phone-frame iframe{width:100%;height:100%;border:none;border-radius:28px;background:#fff;}
+  .phone-close{position:absolute;top:-44px;right:0;background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;}
+</style>
+
+<div class="device-toggle">
+  <button id="laptopBtn" class="active" onclick="setDeviceView('laptop')" aria-label="Desktop view">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+  </button>
+  <button id="phoneBtn" onclick="setDeviceView('phone')" aria-label="Phone view">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+  </button>
+</div>
+
+<div class="phone-overlay" id="phoneOverlay">
+  <div class="phone-frame">
+    <button class="phone-close" onclick="setDeviceView('laptop')" aria-label="Close phone view">&times;</button>
+    <iframe id="phoneFrame" src=""></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+  function setDeviceView(mode){
+    var overlay = document.getElementById('phoneOverlay');
+    var laptopBtn = document.getElementById('laptopBtn');
+    var phoneBtn = document.getElementById('phoneBtn');
+    var frame = document.getElementById('phoneFrame');
+    if(mode === 'phone'){
+      frame.src = window.location.href;
+      overlay.classList.add('open');
+      laptopBtn.classList.remove('active');
+      phoneBtn.classList.add('active');
+    } else {
+      overlay.classList.remove('open');
+      frame.src = '';
+      laptopBtn.classList.add('active');
+      phoneBtn.classList.remove('active');
+    }
+  }
+  window.setDeviceView = setDeviceView;
+})();
+</script>
+
+</body>
+</html>
